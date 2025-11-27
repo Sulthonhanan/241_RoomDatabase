@@ -1,15 +1,15 @@
 package com.example.roomdatabase.view.uicontroller
-// Import standar Android & Compose
+
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.roomdatabase.view.DestinasiHome
 import com.example.roomdatabase.view.EntrySiswaScreen
 import com.example.roomdatabase.view.HomeScreen
 import com.example.roomdatabase.view.route.DestinasiEntry
+import com.example.roomdatabase.view.route.DestinasiHome
 
 
 @Composable
@@ -30,7 +30,7 @@ fun HostNavigasi(
         startDestination = DestinasiHome.route,
         modifier = modifier
     ) {
-        // Halaman Home
+
         composable(route = DestinasiHome.route) {
             HomeScreen(
                 navigateToItemEntry = {
@@ -39,7 +39,7 @@ fun HostNavigasi(
             )
         }
 
-        // Halaman Entry Siswa
+
         composable(route = DestinasiEntry.route) {
             EntrySiswaScreen(
                 navigateBack = {
@@ -49,3 +49,5 @@ fun HostNavigasi(
         }
     }
 }
+
+
